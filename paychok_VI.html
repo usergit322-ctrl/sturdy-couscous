@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="СТО Павучок у Дніпрі: діагностика, ремонт, евакуатор, зварювання, фарбування. Комерційний транспорт. Доступні ціни, гарантія. 📞 +380937574312">
+    <meta name="keywords" content="СТО Дніпро, автосервіс, евакуатор Дніпро, ремонт бусів, комерційний транспорт, зварювання авто, фарбування авто, ремонт ходової">
+    <title>СТО «Павучок» - Дніпро | Автосервіс, евакуатор, зварювання, фарбування, комерційний транспорт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            line-height: 1.5;
+            min-height: 100vh;
+            background-image: url('https://i.ibb.co/zhn9WnCS/Karta.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Якірна навігація */
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            background: rgba(0,0,0,0.7);
+            padding: 12px 25px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+        .nav-links a:hover {
+            color: #FF8C00;
+        }
+        .online-badge {
+            display: inline-block;
+            background: #00a550;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            border-bottom: 2px solid rgba(180, 20, 20, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .logo h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #FF8C00, #FF4500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo p {
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .contact-header {
+            background: rgba(0,0,0,0.6);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            border: 1px solid #8b0000;
+        }
+        .contact-header i {
+            color: #fff;
+            margin-right: 8px;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 30px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(180,20,20,0.3);
+        }
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .hero h2 span {
+            color: #fff;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: #8b0000;
+            color: #fff;
+            padding: 14px 35px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            border: 1px solid #cc3333;
+        }
+        .btn i {
+            margin-right: 8px;
+        }
+        .btn:hover {
+            background: #cc3333;
+            transform: scale(1.05);
+            color: #111;
+        }
+        .services, .prices, .reviews, .contact-section {
+            margin: 70px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        .section-title span {
+            color: #fff;
+            border-bottom: 3px solid #cc3333;
+            padding-bottom: 5px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: rgba(20, 10, 10, 0.85);
+            padding: 30px 20px;
+            border-radius: 24px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid rgba(180, 30, 30, 0.4);
+            backdrop-filter: blur(4px);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #fff;
+            background: rgba(0,0,0,0.8);
+        }
+        .card i {
+            font-size: 3rem;
+            color: #DFFF00;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+        .price-table {
+            background: rgba(0,0,0,0.7);
+            border-radius: 24px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-size: 1.1rem;
+        }
+        .price-row:last-child {
+            border-bottom: none;
+        }
+        .price-name {
+            font-weight: 600;
+        }
+        .price-value {
+            color: #FF8C00;
+            font-weight: 700;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 60px 0;
+            text-align: center;
+        }
+        .feature-item {
+            background: rgba(0,0,0,0.6);
+            padding: 20px 25px;
+            border-radius: 60px;
+            font-weight: 600;
+            border-left: 3px solid #8b0000;
+        }
+        .feature-item i {
+            color: #cc3333;
+            margin-right: 10px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .contact-item {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .contact-item i {
+            font-size: 1.8rem;
+            color: #fff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .callback-form {
+            max-width: 500px;
+            margin: 30px auto 0;
+            background: rgba(0,0,0,0.5);
+            padding: 25px;
+            border-radius: 30px;
+        }
+        .callback-form input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.9);
+        }
+        .callback-form button {
+            width: 100%;
+            cursor: pointer;
+        }
+        .map {
+            margin-top: 30px;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid rgba(180, 30, 30, 0.4);
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .section-title { font-size: 1.8rem; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            .nav-links { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Якірна навігація -->
+    <div class="nav-links">
+        <a href="#services">Послуги</a>
+        <a href="#prices">Ціни</a>
+        <a href="#commercial">Комерційний транспорт</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#contacts">Контакти</a>
+    </div>
+
+    <header>
+        <div class="logo">
+           <h1><img src="https://i.ibb.co/mFMW1ZD9/pavuchok.png" alt="Павучок" style="height: 125px; vertical-align: middle; margin-right: 8px; background: #FF8C00; border-radius: 50%; padding: 5px;"> ПАВУЧОК <span class="online-badge">Працюємо</span></h1>
+            <p>Автосервіс у Дніпрі | Швидко. Якісно.</p>
+        </div>
+        <div class="contact-header">
+            <i class="fas fa-phone-alt"></i> <a href="tel:+380937574312" style="color:#fff; text-decoration:none;">+380937574312</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Твій автомобіль <span>у надійних руках</span></h2>
+        <p>СТО «Павучок» у Дніпрі — діагностика, ремонт, евакуація, зварювання та фарбування. Працюємо для тих, хто цінує час і безпеку.</p>
+        <!-- Тригер для власників комерційного транспорту -->
+        <p style="font-weight:600; color:#FF8C00; background:rgba(0,0,0,0.6); display:inline-block; padding:6px 20px; border-radius:30px; margin-top:10px;">
+            🚐 Спеціалізація: Fiat , Renault , Volkswagen та інші комерційні та легкові авто
+        </p>
+        <br>
+        <a href="tel:+380937574312" class="btn"><i class="fas fa-phone-alt"></i> Подзвонити зараз</a>
+        <a href="https://www.google.com/maps?q=48.508013,35.100791" target="_blank" class="btn" style="background:#FF8C00; margin-left:10px;"><i class="fas fa-map-marker-alt"></i> Прокласти маршрут</a>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title"><span>Наші послуги</span></h2>
+        <div class="cards">
+            <div class="card"><i class="fas fa-microchip"></i><h3>Діагностика</h3><p>Комп'ютерна діагностика двигуна, АКПП, електроніки.</p></div>
+            <div class="card"><i class="fas fa-oil-can"></i><h3>Техобслуговування</h3><p>Заміна масла, фільтрів, технічних рідин.</p></div>
+            <div class="card"><i class="fas fa-car-side"></i><h3>Ремонт ходової</h3><p>Підвіска, гальмівна система, рульове управління.</p></div>
+            <div class="card"><i class="fas fa-truck"></i><h3>Евакуатор</h3><p>Цілодобова евакуація автомобілів у Дніпрі та області.</p></div>
+            <div class="card"><i class="fas fa-wrench"></i><h3>Зварювальний ремонт</h3><p>Зварювальні роботи будь-якої складності, кузовний ремонт.</p></div>
+            <div class="card"><i class="fas fa-paint-roller"></i><h3>Покарска авто</h3><p>Повна та локальна покраска, полірування, підбір фарби.</p></div>
+            <div class="card" style="border-left: 4px solid #FF8C00;">
+                <i class="fas fa-truck-moving"></i>
+                <h3>Комерційний транспорт</h3>
+                <p>Ремонт та обслуговування Fiat , Іveco ,Renault , Volkswagen - PlanDek. Вантажні буси, рефрижератори — працюємо з високим транспортом.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок: переваги для комерційного транспорту -->
+    <section id="commercial" style="background: rgba(20, 10, 10, 0.8); border-radius: 24px; padding: 30px; margin: 40px 0; border: 1px solid #FF8C00;">
+        <h3 style="text-align:center; font-size: 1.8rem; margin-bottom: 20px;">
+            <span style="color:#FF8C00;">🚐</span> Працюємо з комерційним транспортом
+        </h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
+            <div style="flex: 1; min-width: 180px; text-align:center;">
+                <i class="fas fa-ruler-combined" style="font-size:2rem; color:#FF8C00;"></i>
+                <h4 style="margin:10px 0 5px;">Високий заїзд</h4>
+                <p style="font-size:0.9rem;">Заїзд для бусів до 4 м (цільномет, тент, PlanDek тощо)</p>
+            </div>
+            <div style="flex: 1; min-width: 180px; text-align:center;">
+                <i class="fas fa-weight-hanging" style="font-size:2rem; color:#FF8C00;"></i>
+                <h4 style="margin:10px 0 5px;">Підйомники до 5 тонн</h4>
+                <p style="font-size:0.9rem;">Обслуговуємо важкі версії та рефрижератори</p>
+            </div>
+            <div style="flex: 1; min-width: 180px; text-align:center;">
+                <i class="fas fa-clock" style="font-size:2rem; color:#FF8C00;"></i>
+                <h4 style="margin:10px 0 5px;">Мінімальний простій</h4>
+                <p style="font-size:0.9rem;">Діагностика ходової, ДВС, електроніки</p>
+            </div>
+        </div>
+        <p style="text-align:center; margin-top:20px; font-weight:600;">
+            Знаємо особливості комерційного транспорту: <span style="color:#FF8C00;">геометрія кузова, датчики навантаження, захист від корозії</span>.
+        </p>
+        <div style="text-align:center; margin-top:20px;">
+            <a href="https://www.google.com/maps?q=48.508013,35.100791" target="_blank" class="btn" style="background:#FF8C00; display:inline-block;"><i class="fas fa-map-marker-alt"></i> Прокласти маршрут до СТО</a>
+        </div>
+    </section>
+
+    <section id="prices" class="prices">
+        <h2 class="section-title"><span>Ціни на послуги</span></h2>
+        <div class="price-table">
+            <div class="price-row"><span class="price-name">⭐ Діагностика (комп'ютерна)</span><span class="price-value">від 300 грн</span></div>
+            <div class="price-row"><span class="price-name">⭐ Заміна масла</span><span class="price-value">від 800 грн</span></div>
+            <div class="price-row"><span class="price-name">⭐ Евакуатор (по місту)</span><span class="price-value">від 1400 грн</span></div>
+            <div class="price-row"><span class="price-name">⭐ Зварювальні роботи</span><span class="price-value">від 500 грн</span></div>
+            <div class="price-row"><span class="price-name">⭐ Фарбування елемента</span><span class="price-value">від 1000 грн</span></div>
+        </div>
+        <p style="text-align:center; margin-top:15px; font-size:0.9rem;">* Точну вартість уточнюйте за телефоном</p>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <h2 class="section-title"><span>Що кажуть клієнти</span></h2>
+        <div class="cards">
+            <div class="card"><i class="fas fa-star" style="color:#FF8C00;"></i><p>"Швидко та якісно полагодили ходову. Дякую!"</p><h4>— Олександр</h4></div>
+            <div class="card"><i class="fas fa-star" style="color:#FF8C00;"></i><p>"Евакуатор приїхав за 15 хвилин. Рекомендую!"</p><h4>— Катерина</h4></div>
+            <div class="card"><i class="fas fa-star" style="color:#FF8C00;"></i><p>"Зробили зварювання порогів — ідеально. Дякую хлопцям!"</p><h4>— Сергій</h4></div>
+        </div>
+    </section>
+
+    <div class="features">
+        <div class="feature-item"><i class="fas fa-check-circle"></i> Гарантія на роботи</div>
+        <div class="feature-item"><i class="fas fa-clock"></i> Швидко та прозоро</div>
+        <div class="feature-item"><i class="fas fa-tools"></i> Професійне обладнання</div>
+        <div class="feature-item"><i class="fas fa-city"></i> Зручно в Дніпрі</div>
+    </div>
+
+    <section id="contacts" class="contact-section">
+        <h2 class="section-title" style="margin-bottom: 10px;"><span>📞 Контакти</span></h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i> м. Дніпро, вул. журналістів, 10
+                <br>
+                <a href="https://www.google.com/maps?q=48.508013,35.100791" target="_blank" style="color:#FF8C00; font-size:0.9rem; text-decoration:underline; margin-top:5px; display:inline-block;">
+                    <i class="fas fa-location-arrow"></i> Прокласти маршрут
+                </a>
+            </div>
+            <div class="contact-item"><i class="fas fa-phone"></i> <a href="tel:+380937574312" style="color:#fff;">+380937574312</a></div>
+            <div class="contact-item"><i class="fab fa-telegram"></i> <a href="https://t.me/your_username" target="_blank" style="color:#fff;">Telegram</a></div>
+            <div class="contact-item"><i class="fab fa-viber"></i> <a href="viber://chat?number=%2B380937574312" style="color:#fff;">Viber</a></div>
+            <div class="contact-item"><i class="fas fa-clock"></i> Пн-Сб: 09:00 - 19:00</div>
+        </div>
+        
+        <div class="callback-form" style="text-align: center;">
+            <h3 style="margin-bottom:15px;">🚀 Не любите чекати? Телефонуйте просто зараз</h3>
+            <a href="tel:+380937574312" class="btn" style="display: inline-block; width: auto; padding: 14px 40px; margin: 5px;"><i class="fas fa-phone-alt"></i> Подзвонити</a>
+            <a href="viber://chat?number=%2B380937574312" class="btn" style="background:#333; display: inline-block; width: auto; padding: 14px 40px; margin: 5px;"><i class="fab fa-viber"></i> Viber</a>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.123456789!2d35.098291!3d48.509513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0!2zNDjCsDMwJzI4LjkiTiAzNcKwMDYnMDIuOCJF!5e0!3m2!1suk!2sua!4v1700000000000" width="100%" height="250" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 СТО «Павучок» — Ваш надійний автомайстер у Дніпрі.</p>
+        <p style="margin-top:10px;">
+            <a href="https://www.google.com/maps?q=48.508013,35.100791" target="_blank" style="color:#FF8C00; text-decoration:underline;"><i class="fas fa-map-marker-alt"></i> Знайти нас на карті</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
